@@ -3,7 +3,6 @@ let ataqueEnemigo
 let vidasJugador = 3
 let vidasEnemigo = 3
 
-
 function iniciarJuego() {
     let sectionSeleccionarAtaque = document.getElementById("seleccionar-ataque")
     sectionSeleccionarAtaque.style.display = 'none'
@@ -25,8 +24,6 @@ function iniciarJuego() {
 
     let botonReiniciar = document.getElementById('boton-reiniciar')
     botonReiniciar.addEventListener('click', reiniciarJuego)
-
-
 }
 
 function seleccionarMascotaJugador() {
@@ -40,7 +37,7 @@ function seleccionarMascotaJugador() {
     let inputCapipepo = document.getElementById('capipepo')
     let inputRatigueya = document.getElementById('ratigueya')
     let spanMascotaJugador = document.getElementById('mascota-jugador')
-   
+
     if (inputHipodoge.checked){
         alert('Seleccionaste a Hipodoge')
         spanMascotaJugador.innerHTML = 'Hipodoge'
@@ -87,7 +84,6 @@ function ataqueAleatorioEnemigo () {
     let ataqueAleatorio = aleatorio(1,3)
     if (ataqueAleatorio == 1){
         ataqueEnemigo = 'FUEGO'
-
     } else if (ataqueAleatorio == 2){
         ataqueEnemigo = 'AGUA'
     } else {
@@ -99,7 +95,6 @@ function ataqueAleatorioEnemigo () {
 function combate(){
     let spanVidasJugador = document.getElementById("vidas-jugador")
     let spanVidasEnemigo = document.getElementById("vidas-enemigo")
-
 
     if(ataqueEnemigo == ataqueJugador) {
         crearMensaje("EMPATE")
@@ -120,15 +115,13 @@ function combate(){
         vidasJugador--
         spanVidasJugador.innerHTML = vidasJugador
     }     
-    
     revisarVidas()
-
 }
 
 function revisarVidas(){
     if (vidasEnemigo == 0){
         alert("FELICITACIONES!! GANASTE!!")
-    }else if (vidasJugador == 0){
+    } else if (vidasJugador == 0){
         alert("Lo siento papu, perdiste!!!!")
 
         let botonFuego = document.getElementById('boton-fuego');
@@ -146,11 +139,11 @@ function crearMensaje(resultado){
     let sectionResultado = document.getElementById('resultado')
     let ataquesDelJugador = document.getElementById('ataques-del-jugador')
     let ataquesDelEnemigo = document.getElementById('ataques-del-enemigo')
-  
+
     let nuevoAtaqueDelJugador = document.createElement('p')
     let nuevoAtaqueDelEnemigo = document.createElement('p')
 
-    sectionMensajes.innerHTML = resultado
+    sectionResultado.innerHTML = resultado
     nuevoAtaqueDelJugador.innerHTML = ataqueJugador
     nuevoAtaqueDelEnemigo.innerHTML = ataqueEnemigo
 
@@ -162,13 +155,11 @@ function reiniciarJuego(){
     location.reload()
 }
 
-function aleatorio (min, max){
-    return Math.floor ( Math.random() * (max - min + 1) + min)
+function aleatorio(min, max){
+    return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-
 window.addEventListener('load', iniciarJuego)
-
 
 
 
