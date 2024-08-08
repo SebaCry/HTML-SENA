@@ -1,0 +1,107 @@
+body {
+    margin: 0; 
+    min-height: 100vh; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center; 
+    background-image: url(https://us.123rf.com/450wm/chuckchee/chuckchee1701/chuckchee170100013/68744940-p%C3%ADxel-del-fondo-arte-del-juego-con-tierra-hierba-cielo-y-las-nubes.jpg);
+    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.titulo img{
+    width: 900px;    
+    padding: 15px;
+}
+
+.subtitulo{
+    color: white;
+    
+}
+
+.box-edit {
+    width: 350px;
+    height: 250px;
+    color: white;
+    background:linear-gradient(#27E82A,#6D1111);
+    padding:5px;
+    box-sizing: border-box;
+    border: solid white;
+    border-radius: 10px;
+    display:flex;
+    justify-content: center;
+    align-items:normal;
+    color:white;
+    font-size: 20px;
+    box-shadow: 0 0 30px #27E82A, 0 0 70px floralwhite;
+}
+
+.box-edit img{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    }
+
+.boxes{
+    display: flex;
+    gap: 10px;
+    text-align:center;
+
+}
+
+#boton-mascota{
+    width: 160px;
+    height: 50px;
+    margin: 45px;
+    border: 6px solid white;
+    color: white;
+    background: transparent; 
+    cursor: pointer; 
+    border-radius: 30px; 
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow:0 0 40px #27E82A;
+    text-shadow: 0 0 40px #6D1111;
+  }
+
+  input{
+    display:none;
+  }
+
+  #seleccionar-ataque{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+.boton-ataque{
+    width: 150px;
+    height: 100px;
+    border-radius: 40px;
+    border: solid white 5px;
+    background:linear-gradient(#27E82A,#6D1111);  
+    color:white;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#mensajes {
+    width: 180px;
+    background-color: hotpink;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
