@@ -21,6 +21,12 @@ body {
 .titulo img{
     width: 900px;    
     padding: 15px;
+    color: white;
+}
+
+.titulo {
+    color: white;
+    font-size: 90px;
 }
 
 .subtitulo{
@@ -97,7 +103,9 @@ input{
 
 #mensajes {
     width: 180px;
-    background-color: hotpink;
+    background: linear-gradient(to right, #090979, #00d4ff);
+    border: 6px solid white;
+    color: white;
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
