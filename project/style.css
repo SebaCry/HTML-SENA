@@ -9,21 +9,9 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-#seleccionar-mascota{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: -40px;
-}
-
-.titulo img{
+.titulo img, .titulo {
     width: 900px;    
     padding: -20px;
-    color: white;
-}
-
-.titulo {
     color: white;
     font-size: 90px;
 }
@@ -32,6 +20,13 @@ body {
     color: white;
     font-size: 35px;
     
+}
+
+.box-edit img{
+    width: 210px;
+    height: 200px;
+    display: flex;
+
 }
 
 .box-edit {
@@ -51,19 +46,24 @@ body {
     box-shadow: 0 0 30px #27E82A, 0 0 70px floralwhite;
 }
 
-.box-edit img{
-    width: 210px;
-    height: 200px;
-    display: flex;
-
-}
-
 .boxes, .tarjetas-ataque{
     display: flex;
     gap: 15px;
     text-align:center;
 
 }
+
+.boton-ataque{
+    width: 150px;
+    height: 100px;
+    border-radius: 40px;
+    border: solid white 5px;
+    background:linear-gradient(#27E82A,#6D1111);  
+    color:white;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 
 #boton-mascota{
     width: 160px;
@@ -80,8 +80,13 @@ body {
     text-shadow: 0 0 40px #6D1111;
 }
 
-input{
-    display:none;
+
+#seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -45px;
 }
 
 #seleccionar-ataque{
@@ -91,18 +96,9 @@ input{
     justify-content: center;
     color: white;
     font-size: 20px;
+    margin-top: -45px;
 }
 
-.boton-ataque{
-    width: 150px;
-    height: 100px;
-    border-radius: 40px;
-    border: solid white 5px;
-    background:linear-gradient(#27E82A,#6D1111);  
-    color:white;
-    font-size: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
 
 #mensajes {
     width: 180px;
@@ -117,10 +113,15 @@ input{
     font-size: 20px;
 }
 
+input{
+    display:none;
+}
+
 .numero-ataques{
     display: grid;
+    margin-top: -25px;
     grid-template-columns: 100px 100px;
-    gap: 45px
+    gap: 30px
 }
 
 .ataques--jugador, .ataques--enemigo {
@@ -130,8 +131,9 @@ input{
 
 }
 
-
-
+#vidas-jugador, #vidas-enemigo {
+    font-size: 45px;
+}
 
 @media (max-width: 360px) {
     .boxes, .tarjetas-ataque {
