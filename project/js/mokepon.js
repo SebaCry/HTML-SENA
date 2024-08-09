@@ -153,6 +153,7 @@ function crearMensaje(resultado){
 
 function reiniciarJuego(){
     location.reload()
+    reiniciarContadorAtaques();
 }
 
 function aleatorio(min, max){
