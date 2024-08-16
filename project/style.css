@@ -26,7 +26,7 @@ body {
     display: flex;
 }
 
-.box-edit {
+.box-edit{
     width: 350px;
     height: 250px;
     color: white;
@@ -40,10 +40,10 @@ body {
     align-items: normal;
     font-size: 20px;
     box-shadow: 0 0 30px #27E82A, 0 0 70px floralwhite;
-    transition: background-color 0.4s ease-out; 
+
 }
 
-.boxes, .tarjetas-ataque {
+.boxes, .tarjetas-ataque, #contenedorBoxes {
     display: flex;
     gap: 15px;
     text-align: center;
@@ -106,13 +106,15 @@ body {
     font-size: 20px;
 }
 
-input{
-    display: none;
+input {
+    opacity: 0;
+    position: absolute;
 }
 
 input:checked + label {
     background-color: rgb(47, 182, 47);
-    background-image: none; /* Elimina el linear-gradient cuando está seleccionado */
+    background-image: none;
+    transition: background-color 0.4s ease-out;/* Elimina el linear-gradient cuando está seleccionado */
 }
 
 .numero-ataques {

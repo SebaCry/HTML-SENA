@@ -1,16 +1,12 @@
 const sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
 const sectionReiniciar = document.getElementById('reiniciar')
 const botonMascotaJugador = document.getElementById('boton-mascota')
-const botonTierra = document.getElementById('boton-tierra')
-sectionReiniciar.style.display = 'none'
-const botonFuego = document.getElementById('boton-fuego')
-const botonAgua = document.getElementById('boton-agua')
 const botonReiniciar = document.getElementById('boton-reiniciar')
+sectionReiniciar.style.display = 'none'
+
 
 const sectionSeleccionarMascota = document.getElementById("seleccionar-mascota")
-const inputHipodoge = document.getElementById('hipodoge')
-const inputCapipepo = document.getElementById('capipepo')
-const inputRatigueya = document.getElementById('ratigueya')
+
 const spanMascotaJugador = document.getElementById('mascota-jugador')
 
 const spanMascotaEnemigo = document.getElementById('mascota-enemigo')
@@ -22,11 +18,20 @@ const sectionMensajes = document.getElementById('resultado')
 const ataquesDelJugador = document.getElementById('ataques-del-jugador')
 const ataquesDelEnemigo = document.getElementById('ataques-del-enemigo')
 const contenedorBoxes = document.getElementById('contenedorBoxes')
+const contenedorAtaques = document.getElementById('contenedorAtaques')
 
 let mokepones = []
 let ataqueJugador 
 let ataqueEnemigo
 let opcionesMokepones
+let inputHipodoge
+let inputCapipepo
+let inputRatigueya 
+let mascotaJugador
+let ataquesMokepon
+let botonFuego
+let botonAgua
+let botonTierra
 let vidasJugador = 3
 let vidasEnemigo = 3
 
@@ -77,23 +82,21 @@ function iniciarJuego() {
 
     mokepones.forEach((mokepon) => {
         opcionesMokepones = 
-        `<input type="radio" name="mascota" id=${mokepon.nombre}/>
+        `<input type="radio" name="mascota" id=${mokepon.nombre} />
             <label class="box-edit" for=${mokepon.nombre}>
                 <p>${mokepon.nombre}</p>
-                <img src=${mokepon.foto} alt=${mokepon.nombre}>
+                <img src=${mokepon.foto} alt=${mokepon.nombre} >
             </label>` 
 
-            contenedorBoxes.innerHTML += opcionesMokepones
+    contenedorBoxes.innerHTML += opcionesMokepones
+        
+    inputHipodoge = document.getElementById('Hipodoge')
+    inputCapipepo = document.getElementById('Capipepo')
+    inputRatigueya = document.getElementById('Ratigueya')
     })
-    
+
     botonMascotaJugador.addEventListener('click', seleccionarMascotaJugador)
 
-    botonFuego.addEventListener('click', ataqueFuego)
-    
-    botonAgua.addEventListener('click', ataqueAgua)
-
-    botonTierra.addEventListener('click', ataqueTierra)
-    
     botonReiniciar.addEventListener('click', reiniciarJuego)
 }
 
@@ -104,33 +107,54 @@ function seleccionarMascotaJugador() {
     
     sectionSeleccionarAtaque.style.display = 'flex'
 
-    
-
     if (inputHipodoge.checked){
-        alert('Seleccionaste a Hipodoge')
-        spanMascotaJugador.innerHTML = 'Hipodoge'
+        spanMascotaJugador.innerHTML = inputHipodoge.id
+        mascotaJugador = inputHipodoge.id
     } else if (inputCapipepo.checked) {
-        spanMascotaJugador.innerHTML = 'Capipepo'
-        alert('Seleccionaste a Capipepo')
+        spanMascotaJugador.innerHTML = inputCapipepo.id
+        mascotaJugador = inputCapipepo.id
     } else if (inputRatigueya.checked) {
-        spanMascotaJugador.innerHTML = 'Ratigueya'
-        alert('Seleccionaste a Ratigueya')
+        spanMascotaJugador.innerHTML = inputRatigueya.id
+        mascotaJugador = inputRatigueya.id
     } else {
         alert('NO SELECCIONASTE LA MASCOTA')
     }
+    extraerAtaques(mascotaJugador)
     seleccionarMascotaEnemigo()
 }
 
-function seleccionarMascotaEnemigo() {
-    let ataqueAleatorio = aleatorio(1,3)
+function extraerAtaques(mascotaJugador){
+    let ataques
+    for (let i = 0; i < mokepones.length; i++) {
+        if (mascotaJugador === mokepones[i].nombre)
+            ataques = mokepones[i].ataques
+    }
+    mostrarAtaques(ataques)
+}
+
+function mostrarAtaques(ataques){
+    ataques.forEach((ataque) => {
+        ataquesMokepon = `
+        <button id="${ataque.id}" class="boton-ataque"> ${ataque.nombre} </button>
+        `
+        contenedorAtaques.innerHTML += ataquesMokepon
+    })
+    botonFuego = document.getElementById('boton-fuego')
+    botonAgua = document.getElementById('boton-agua')
+    botonTierra = document.getElementById('boton-tierra')
     
-    if (ataqueAleatorio == 1) {
-        spanMascotaEnemigo.innerHTML = 'Hipodoge'
-    } else if (ataqueAleatorio == 2) {
-        spanMascotaEnemigo.innerHTML = 'Capipepo'
-    } else if (ataqueAleatorio == 3) {
-        spanMascotaEnemigo.innerHTML = 'Ratigueya'
-    } 
+
+    botonFuego.addEventListener('click', ataqueFuego)
+    
+    botonAgua.addEventListener('click', ataqueAgua)
+
+    botonTierra.addEventListener('click', ataqueTierra)
+}
+
+function seleccionarMascotaEnemigo() {
+    let ataqueAleatorio = aleatorio(1,mokepones.length -1)
+    
+    spanMascotaEnemigo.innerHTML = mokepones[ataqueAleatorio].nombre
 }
 
 function ataqueFuego () {
