@@ -22,7 +22,7 @@ const sectionMensajes = document.getElementById('resultado')
 const ataquesDelJugador = document.getElementById('ataques-del-jugador')
 const ataquesDelEnemigo = document.getElementById('ataques-del-enemigo')
 
-
+let mokepones = []
 let ataqueJugador 
 let ataqueEnemigo
 let vidasJugador = 3
@@ -33,6 +33,7 @@ class Mokepon {
         this.nombre = nombre
         this.foto = foto
         this.vidas = vidas
+        this.ataques = []
     }
 }
 
@@ -42,6 +43,31 @@ let capipepo = new Mokepon('Capipepo', './images/fuego.png', 5)
 
 let ratigueya = new Mokepon('Ratigueya', './images/ratigueyaaaa.png', 5)
 
+hipodoge.ataques.push(
+    { nombre: '💧', id: 'boton-agua'},
+    { nombre: '💧', id: 'boton-agua'},
+    { nombre: '💧', id: 'boton-agua'},
+    { nombre: '🔥', id: 'boton-fuego'},
+    { nombre: '🌱', id: 'boton-tierra'},
+)
+
+capipepo.ataques.push(
+    { nombre: '🔥', id: 'boton-fuego'},
+    { nombre: '🔥', id: 'boton-fuego'},
+    { nombre: '🔥', id: 'boton-fuego'},
+    { nombre: '💧', id: 'boton-agua'},
+    { nombre: '🌱', id: 'boton-tierra'},
+)
+
+ratigueya.ataques.push(
+    { nombre: '🌱', id: 'boton-tierra'},
+    { nombre: '🌱', id: 'boton-tierra'},
+    { nombre: '🌱', id: 'boton-tierra'},
+    { nombre: '💧', id: 'boton-agua'},
+    { nombre: '🔥', id: 'boton-fuego'},
+)
+
+mokepones.push(hipodoge, capipepo, ratigueya)
 
 function iniciarJuego() {
     
