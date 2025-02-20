@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Tipos de etiquetas en HTML</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body style="background-color: antiquewhite; padding: 100px; text-align: center;">
+        <!-- 1. Encabezado principal-->        
+        <h1 id="titulo-principal" style="color:blue">Encabezado Principal</h1>
+
+        <!-- 2. Parrafo de texto-->
+        <p class="textp" align="justify">Este es un parrafo de ejemplo</p>
+
+        <!-- 3. Enlace a otra pagina-->
+        <a href="http://" target="_blank" title="Visita del sitio">Haz clic aqui</a>
+
+        <!-- 4. Contenedor div para agrupar elementos-->        
+        <div class="contenedor" style="border: 1px solid pink; padding:10px"></div>
+
+        <!-- 5. Lista desordenada-->
+        <ul type="disc">
+            <li>Type2
+            </li>
+            <li>Type2
+            </li>
+        </ul>
+
+        <!-- 6. Lista ordenada (numerada)-->
+        <ol type="1">
+            <li>Type2</li>
+            <li>Type2</li>
+        </ol>
+
+        <!-- 7. Tabla simple-->        
+        <table border="1" width="100%">
+            <tr> <!-- Fila -->
+                <th>Titulo 1</th> <!-- Celda de encabezado -->
+                <th>Titulo 2</th>
+            </tr>
+            <tr>
+                <td>Dato 1</td> <!-- Celda de datos -->
+                <td>Dato 2</td>
+            </tr>
+        </table>
+
+        <br>
+        <br>
+        <br>
+        <!-- 8. Formulario simple-->
+        <form action="/enviar" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" placeholder="Tu correo electronico" required>
+
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpiar</button>
+         </form>
+        
+         <!-- 12. Script-->
+        <!-- <script>alert('Hola mundo!')</script> -->
+
+        <audio src="Proyectos<audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+        <p>Open from <time>10:00</time> to <time>21:00</time> every weekday.</p>
+
+        <p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
+
+        <span>How do you say Supercalifragilistic<wbr>expialidocious?</span>
+
+        <br>
+        <br>
+
+        The microblogging site <acronym title="Founded in 2006"> Twitter</acronym> has recently struggled with downtimes.
+
+        
+        <audio controls src="assets/papu-tienes-una-videollamada.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+        <optgroup label="1PM"></optgroup>
+
+            <address id=”dir-home”>
+                Calle 93 #20 – 40 sur
+            </address>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.119025312857!2d2.294481015710256!3d48.85837007928753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x5404127005f1f9b9!2sTorre%20Eiffel!5e0!3m2!1ses!2sus!4v1698765432100!5m2!1ses!2sus"
+                style="width: 30pc; height: 40pc;"></iframe>
+                
+    </body>
+</html>
