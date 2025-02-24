@@ -1,0 +1,36 @@
+html {
+    background: beige;
+    height: 100vh;
+}
+
+
+h1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(13, 9, 228);
+    text-shadow: 0 0 10px;
+}
+
+dt {
+    font-weight: bold;
+    font-size: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+dd {
+    padding-top: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.a1 {
+    color:black;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+
+button {
+    background-color: transparent;
+    border:solid 3px blue;
+    border-radius: 100px;
+}
