@@ -8,7 +8,7 @@
 }
 
 .main {
-    width: 70%;
+    width: 65%;
     background: #fff;
     float: left;
 }
@@ -33,7 +33,7 @@
 }
 
 aside {
-    width: 26%;
+    width: 31%;
     background: #2179B0;
     padding: 20px;
     color: #fff;
@@ -60,14 +60,13 @@ nav ul {
 }
 
 nav a {
-    color: #2179B0;
+    color: black;
     margin-left: 20px;
     text-decoration: none;
     margin-top: 10px;
     font-size: 16px;
     transition: color 0.3s;
-    border: solid 1px black;
-
+    font-weight: bold;
 }
 
 
